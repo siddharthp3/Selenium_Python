@@ -17,11 +17,11 @@ driver.get("https://www.google.com/")
 print(driver.title)
 
 """Find the search box to enter the required text"""
-driver.find_element(By.NAME,"q").send_keys("PrivacyIO")
+driver.find_element(By.NAME, "q").send_keys("PrivacyIO")
 
-time.sleep(3) # wait for the results to load
+time.sleep(3)  # wait for the results to load
 """Store all the options in option_list"""
-option_list = driver.find_elements(By.CSS_SELECTOR,"ul.erkvQe li span")
+option_list = driver.find_elements(By.CSS_SELECTOR, "ul.erkvQe li span")
 
 """Using for loop select the one required and click on the same"""
 for item in option_list:
