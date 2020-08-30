@@ -13,7 +13,9 @@ driver.maximize_window()
 """To handle auth popup pass in the username and password along with the url"""
 driver.get("https://cgi-lib.berkeley.edu/ex/fup.html")
 
-"""Find the element to upload the file and send the path of the file to be uploaded"""
+"""Find the element to upload the file and send the path of the file to be uploaded
+Will only work if type="file" attribute is presnet 
+"""
 driver.find_element(By.NAME, "upfile").send_keys("C:\\Users\\siddharthp3\\Documents\\Sample.txt")
 
 driver.find_element(By.XPATH, "//input[@type='submit']").click()
